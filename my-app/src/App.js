@@ -5,26 +5,10 @@ import TodoList from "./components/TodoList";
 
 function App() {
 
-  const [todo, setTodo] = useState([
-    {
-    id:1,
-    title:"first title",
-    status:true
-  },
-  {
-    id:2,
-    title:"first title",
-    status:true
-  },
-  {
-    id:3,
-    title:"first title",
-    status:true
-  },
-])
+  const [todo, setTodo] = useState([]);
   return (
     <div>
-      <Todo />
+      <Todo todo={todo} setTodo={setTodo} />
       <TodoList todo={todo} setTodo={setTodo} />
     </div>
   );
